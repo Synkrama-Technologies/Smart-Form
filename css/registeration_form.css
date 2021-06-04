@@ -1,0 +1,296 @@
+@font-face {
+	font-family: ProximaSoft-Regular;
+	/* src: url("http://localhost/form7/font/ProximaSoft-Regular.ttf"); */
+	src: url("https://smartform.synkrama.dev/font/ProximaSoft-Regular.ttf");
+}
+
+/* @font-face {
+	font-family: ProximaSoft-Regular;
+	src: url("https://smartform.synkrama.dev/font/ProximaSoft-Regular.eot");
+	src: url("https://smartform.synkrama.dev/font/ProximaSoft-Regular.woff") format("woff"),
+		url("https://smartform.synkrama.dev/font/ProximaSoft-Regular.otf") format("opentype"),
+		url("https://smartform.synkrama.dev/font/ProximaSoft-Regular.svg#filename") format("svg");
+} */
+
+body {
+	font-family: ProximaSoft-Regular;
+	font-weight: normal;
+	font-style: normal;
+	background-color: #fafafa;
+}
+
+.navbar {
+	background-color: black;
+	/* background-color: #86BBD8; */
+	/* background-color: #337CA0; */
+	/* background-color: #05A8AA; */
+	color: white;
+}
+
+.nav-link {
+	padding: auto;
+	margin: 0px 15px;
+	font-weight: 600;
+	color: white !important;
+}
+
+.fw-bold,
+th {
+	font-weight: 600;
+}
+
+.btn-orange {
+	background-color: #ff4321;
+	color: white;
+}
+
+.btn-orange:hover {
+	border-color: #e23010;
+	background-color: #e23010;
+	color: #fff;
+}
+
+.btn-orange:focus {
+	box-shadow: 0 0 0 0.25rem rgba(248, 78, 11, 0.5);
+}
+
+.btn-purple,
+.bg-purple {
+	background-color: #6e2f94;
+	color: white;
+}
+
+.btn-purple:hover {
+	border-color: #63258a;
+	background-color: #63258a;
+	color: #fff;
+}
+
+.btn-purple:focus {
+	box-shadow: 0 0 0 0.25rem rgba(136, 37, 175, 0.5);
+}
+
+.btn-red {
+	background-color: #d2322d;
+	color: white;
+}
+
+.btn-red:hover {
+	color: #fff;
+	background-color: #bb2d3b;
+	border-color: #b02a37;
+}
+
+.btn-red:focus {
+	box-shadow: 0 0 0 0.25rem rgba(225, 83, 97, 0.5);
+}
+
+.btn-green {
+	background-color: #47a447;
+	color: white;
+}
+
+.btn-green:hover {
+	border-color: #369136;
+	background-color: #369136;
+	color: #fff;
+}
+
+.btn-green:focus {
+	box-shadow: 0 0 0 0.25rem rgba(60, 153, 110, 0.5);
+}
+
+.btn-yellow {
+	background-color: #ed9c28;
+	color: white;
+}
+
+.btn-yellow:hover {
+	border-color: #e2901d;
+	background-color: #e2901d;
+	color: #fff;
+}
+
+.btn-yellow:focus {
+	box-shadow: 0 0 0 0.25rem rgba(212, 163, 17, 0.5);
+}
+
+.modal-title {
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
+.modal-header {
+	background-color: #6e2f94;
+	color: white;
+}
+
+label {
+	padding-top: 5px;
+	padding-bottom: 2px;
+}
+
+td,
+th {
+	padding-left: 10px;
+	padding-right: 10px;
+	vertical-align: middle;
+}
+
+
+
+.card-header {
+	text-transform: uppercase;
+	padding-top: 15px;
+}
+
+.btn1 {
+	min-width: 100px;
+	margin: 0px 10px;
+}
+
+.login_1 {
+	margin: 100px 400px;
+}
+
+/* .register_1 {
+	margin: 50px 200px;
+} */
+
+.register_1 {
+	margin: 50px 0px;
+}
+
+.table_padding{
+	padding: 0px 20px;
+}
+
+.div_hidden_1 {
+	height: 200px;
+}
+
+.div_hidden_2 {
+	height: 200px;
+}
+
+.div_hidden_3 {
+	height: 72px;
+}
+
+.div_hidden_4 {
+	height: 395px;
+}
+
+.div_hidden_5 {
+	height: 395px;
+}
+
+@media only screen and (min-width: 781px) and (max-width: 992px) {
+	.login_1 {
+		margin: 100px 50px;
+	}
+
+	.register_1 {
+		margin: 50px 0px;
+	}
+
+	.div_hidden_2 {
+		height: 300px;
+	}
+
+	.div_hidden_3 {
+		height: 221px;
+	}
+
+	.table_padding{
+		padding: 0px 20px;
+	}
+}
+
+@media only screen and (min-width: 993px) and (max-width: 1300px) {
+	.login_1 {
+		margin: 100px 200px;
+	}
+
+	.register_1 {
+		margin: 50px 0px;
+	}
+
+	.div_hidden_2 {
+		height: 300px;
+	}
+
+	.div_hidden_3 {
+		height: 170px;
+	}
+
+	.div_hidden_4 {
+		height: 494px;
+	}
+
+	.div_hidden_5 {
+		height: 494px;
+	}
+
+	.table_padding{
+		padding: 0px 20px;
+	}
+}
+
+@media only screen and (max-width: 780px) {
+	.login_1 {
+		margin: 50px 0px;
+	}
+
+	.register_1 {
+		margin: 20px 0px;
+	}
+
+	.table_padding{
+		padding: 0px;
+	}
+}
+
+@media only screen and (max-width: 425px) {
+	.div_hidden_3 {
+		height: 85px;
+	}
+
+	.div_hidden_2 {
+		height: 20px;
+	}
+
+	.div_hidden_4 {
+		height: 115px;
+	}
+
+	.div_hidden_5 {
+		height: 142px;
+	}
+
+	.table_padding{
+		padding: 0px;
+	}
+}
+
+@media only screen and (min-width: 426px) and (max-width: 780px) {
+	.div_hidden_3 {
+		height: 264px;
+	}
+
+	.div_hidden_2 {
+		height: 20px;
+	}
+
+	.div_hidden_4 {
+		height: 321px;
+	}
+
+	.div_hidden_5 {
+		height: 321px;
+	}
+
+	.table_padding{
+		padding: 0px;
+	}
+}
