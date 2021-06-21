@@ -22,7 +22,7 @@
 
     <?php include('includes/navbar.php') ?>
 
-    <section class="container mt-3 mb-3">
+    <section class="container-fluid mt-3 mb-3">
         <section class="register_1">
             <div class="card">
                 <div class="card-header bg-purple text-center">
@@ -30,7 +30,7 @@
                 </div>
                 <div class="card-body">
                     <div class="table-responsive table_padding">
-                        <table class="table table-bordered table-striped" style="white-space: nowrap;" width="100%" id="dataTable" cellspacing="0">
+                        <table class="table table-bordered table-striped table-hover" style="white-space: nowrap;" width="100%" id="dataTable" cellspacing="0">
                             <thead>
                                 <tr class="text-center" style="background-color: #fafafa;">
                                     <th>ID <img src="<?php echo base_url('images/icons/sort.png'); ?>" alt="sort-icon"></th>
@@ -41,10 +41,12 @@
                                 </tr>
                             </thead>
                             <?php
+                            $count = 1;
                             foreach ($client as $row) {
+
                                 echo "
                                     <tr class='text-center'>
-                                        <td>$row->client_id</td>
+                                        <td>$count</td>
                                         <td>$row->client_name</td>
                                         <td>$row->client_url</td>
                                         <td>$row->client_primary_email </td>
@@ -58,6 +60,7 @@
                                         </td>
                                     </tr> 
                                 ";
+                                $count++;
                             ?>
 
 
@@ -71,11 +74,21 @@
                                             </div>
                                             <div class="modal-body">
                                                 <form action="update_client" method="POST" class="needs-validation" novalidate>
-
-                                                    <label for="client_primary_email">Client Primary Email</label>
-                                                    <input type="text" name="client_primary_email" class="form-control mt-1" value="<?php echo $row->client_primary_email; ?>">
-                                                    <input type="text" name="client_id" value="<?php echo $row->client_id; ?>" hidden>
-
+                                                    <section class="row g-3">
+                                                        <div class="form-group col-sm-12">
+                                                            <label for="client_name">Client Name <span class="text-danger">*</span></label>
+                                                            <input type="text" name="client_name" class="form-control mt-1" value="<?php echo $row->client_name; ?>">
+                                                        </div>
+                                                        <div class="form-group col-sm-12">
+                                                            <label for="client_url">Client URL <span class="text-danger">*</span></label>
+                                                            <input type="text" name="client_url" class="form-control mt-1" value="<?php echo $row->client_url; ?>">
+                                                        </div>
+                                                        <div class="form-group col-sm-12">
+                                                            <label for="client_primary_email">Client Primary Email <span class="text-danger">*</span></label>
+                                                            <input type="text" name="client_primary_email" class="form-control mt-1" value="<?php echo $row->client_primary_email; ?>">
+                                                            <input type="text" name="client_id" value="<?php echo $row->client_id; ?>" hidden>
+                                                        </div>
+                                                    </section>
                                                     <br><br>
                                                     <div class="text-center">
                                                         <button type="button" class="btn btn-orange btn1" data-bs-dismiss="modal">Close</button>

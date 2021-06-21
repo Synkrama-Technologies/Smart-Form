@@ -68,8 +68,8 @@ class Form_Model extends CI_Model
             $form_ip_address = '<input type="text" name="form_ip_address" id="form_ip_address" value="' . $_SERVER['REMOTE_ADDR'] . '" hidden>';
             // $form_ip_address .= '<input type="text" name="page_referrer" id="page_referrer" value="' . $_SERVER['HTTP_REFERER'] . '" disabled><br><br>';
             $form_ip_address .= '<input type="text" name="utm_source" id="utm_source" value="Direct" hidden>';
-         
-            
+
+
             $formEnd = "</form>";
 
             $form_html = $formStart . $form_id_pass . $form_ip_address . $form_html_2 . $formEnd;
@@ -123,5 +123,21 @@ class Form_Model extends CI_Model
             // }
         }
         return $query_form_2->result();
+    }
+
+
+    public function duplicate_email($client_primary_email)
+    {
+        $this->db->where('client_primary_email', $client_primary_email);
+        $query = $this->db->get('client');
+        if ($query->row()) {
+            // echo "Duplicate Email ID";
+            // die;
+            return 'Duplicate Email ID';
+        } else {
+            // echo "Not found";
+            // die;
+            return $query->row();
+        }
     }
 }

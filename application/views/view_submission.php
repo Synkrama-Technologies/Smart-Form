@@ -24,7 +24,7 @@
 
     <?php include('includes/navbar.php') ?>
 
-    <section class="container mt-3 mb-3">
+    <section class="container-fluid mt-3 mb-3">
         <section class="register_1">
             <div class="card">
                 <div class="card-header bg-purple text-center">
@@ -38,7 +38,7 @@
                         </div>
                     </div>
                     <div class="table-responsive table_padding">
-                        <table class="table table-bordered table-striped table2excel" style="white-space: nowrap;" width="100%" id="dataTable" cellspacing="0">
+                        <table class="table table-bordered table-striped table-hover table2excel" style="white-space: nowrap;" width="100%" id="dataTable" cellspacing="0">
                             <thead>
                                 <tr class="text-center" style="background-color: #fafafa;">
                                     <th>Sr. No. <img src="<?php echo base_url('images/icons/sort.png'); ?>" alt="sort-icon"></th>

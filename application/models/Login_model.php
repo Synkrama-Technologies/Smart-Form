@@ -3,13 +3,24 @@
 class Login_model extends CI_Model
 {
 
-    public function auth_check($data)
+    public function auth_check($username, $password)
     {
-        $query = $this->db->get_where('user_table', $data);
-        if($query){   
-         return $query->row();
+        $this->db->where('username', $username);
+        $query1 = $this->db->get('user_table');
+        if ($query1->row()) {
+            $this->db->where('username', $username);
+            $this->db->where('password', $password);
+            $query = $this->db->get('user_table');
+            if ($query->row()) {
+                return $query->row();
+            } else {
+                return 'Wrong Password';
+            }
+        } else {
+            return 'Wrong Login ID';
         }
-        return false;
+
     }
 
+    
 }

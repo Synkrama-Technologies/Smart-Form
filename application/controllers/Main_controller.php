@@ -7,13 +7,18 @@ class Main_controller extends CI_Controller
 	{
 		parent::__construct();
 		$this->load->library('email');
+		$this->load->library('form_validation');
 		$this->load->model('Form_Model');
 		$this->load->model('Login_model');
 	}
 
 	public function index()
 	{
-		$this->load->view('user_login');
+		if ($this->session->userdata('username')) {
+			redirect('home');
+		} else {
+			$this->load->view('user_login');
+		}
 	}
 
 	// LOGIN
@@ -26,42 +31,34 @@ class Main_controller extends CI_Controller
 	// CHECK LOGIN
 	public function verify_login()
 	{
-		$username1 = $this->input->POST('user_login_id');
-		$password2 = md5($this->input->POST('user_password'));
+		if (isset($_POST['login_button'])) {
 
-		$data = array(
-			'username' => $username1,
-			'password' => $password2
-		);
-		// print_r($data);
-		// echo "<br>";
+			$this->form_validation->set_rules('user_login_id', 'Login ID', 'trim|required');
+			$this->form_validation->set_rules('user_password', 'Password', 'trim|required');
+			if ($this->form_validation->run()) {
 
-		$check = $this->Login_model->auth_check($data);
-		// print_r($check);
-		// echo "<br>";
+				$username = $this->input->POST('user_login_id');
+				$password = md5($this->input->POST('user_password'));
 
-		if ($check != false) {
+				$result = $this->Login_model->auth_check($username, $password);
+			}
 
-			$user = array(
-				'id' => $check->id,
-				'username' => $check->username
-			);
-			// print_r($user);
-			$this->session->set_userdata($user);
 
-			echo "
-			    <script>
-			        location.href = 'home';
-			    </script>
-			";
+			if (!is_string($result)) {
+				$user = array(
+					'id' => $result->id,
+					'username' => $result->username
+				);
+				$this->session->set_userdata($user);
+
+				$this->session->set_flashdata('success_message', $result);
+				redirect(base_url('home'));
+			} else {
+				$this->session->set_flashdata('message', $result);
+				redirect('login');
+			}
 		} else {
-
-			echo "
-                    <script>
-                        alert('Incorrect Email or Password');
-                        location.href = 'login';
-                    </script>
-			";
+			redirect('login');
 		}
 	}
 
@@ -107,33 +104,44 @@ class Main_controller extends CI_Controller
 
 	public function add_client()
 	{
-		$client_name = $this->input->POST('client_name');
-		$client_url = $this->input->POST('client_url');
-		$client_primary_email = $this->input->POST('client_primary_email');
+		if (isset($_POST['add_client'])) {
+			
+			$this->form_validation->set_rules('client_name', 'Client Name', 'trim|required');
+			$this->form_validation->set_rules('client_url', 'Client URL', 'trim|required');
+			$this->form_validation->set_rules('client_primary_email', 'Client Primary Email', 'trim|required');
+			if ($this->form_validation->run()) {
 
-		$data = array(
-			'client_name' => $client_name,
-			'client_url' => $client_url,
-			'client_primary_email' => $client_primary_email
-		);
-		// print_r($data);
-		// echo "<br><br>";
+				$client_name = $this->input->POST('client_name');
+				$client_url = $this->input->POST('client_url');
+				$client_primary_email = $this->input->POST('client_primary_email');
 
-		$insert_data = $this->db->insert('client', $data);
+				$result = $this->Form_Model->duplicate_email($client_primary_email);
+			}
 
-		if ($insert_data) {
-			echo "
-                <script>
-                    location.href = 'home';
-                </script>
-            ";
+			if (is_string($result)) {
+				$this->session->set_flashdata('message', $result);
+				redirect(base_url('client_registeration'));
+			} else {
+
+				$data = array(
+					'client_name' => $client_name,
+					'client_url' => $client_url,
+					'client_primary_email' => $client_primary_email
+				);
+
+				$insert_data = $this->db->insert('client', $data);
+
+				if ($insert_data) {
+					$this->session->set_flashdata('success_message', $result);
+					redirect('home');
+				} else {
+					$this->session->set_flashdata('message', 'Client could not be added');
+					redirect('client_registeration');
+				}
+
+			}
 		} else {
-			echo "
-                <script>
-                    alert('Client could not be added');
-                    location.href = 'home';
-                </script>
-            ";
+			redirect('client_registeration');
 		}
 	}
 
@@ -175,20 +183,23 @@ class Main_controller extends CI_Controller
 	{
 		if (isset($_POST['update_confirm'])) {
 			$client_id = $this->input->POST('client_id');
+			$client_name = $this->input->POST('client_name');
+			$client_url = $this->input->POST('client_url');
 			$client_primary_email = $this->input->POST('client_primary_email');
 
 			// echo $client_primary_email;
 
-			$query_update_client = "UPDATE client SET client_primary_email='$client_primary_email' WHERE client_id='$client_id'";
+			$query_update_client = "UPDATE client SET client_name='$client_name',client_url='$client_url',client_primary_email='$client_primary_email'
+			 WHERE client_id='$client_id'";
 			$result_update_client = $this->db->query($query_update_client);
 			if ($result_update_client) {
 				// echo "Successfully updated <br>";
-				redirect(base_url('manage_client'));
+				redirect(base_url('home'));
 			} else {
-				redirect(base_url('manage_client'));
+				redirect(base_url('home'));
 			}
 		} else {
-			redirect(base_url('manage_client'));
+			redirect(base_url('home'));
 		}
 	}
 

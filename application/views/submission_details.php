@@ -22,7 +22,7 @@
 
     <?php include('includes/navbar.php') ?>
 
-    <section class="container mt-3 mb-3">
+    <section class="container-fluid mt-3 mb-3">
         <section class="register_1">
             <div class="card">
                 <div class="card-header bg-purple text-center">
@@ -30,7 +30,7 @@
                 </div>
                 <div class="card-body">
                     <div class="table-responsive">
-                        <table class="table table-bordered table-striped" style="white-space: nowrap;">
+                        <table class="table table-bordered table-striped table-hover" style="white-space: nowrap;">
                             <thead>
                                 <tr class="text-center" style="background-color: #fafafa;">
                                     <th>Form ID</th>

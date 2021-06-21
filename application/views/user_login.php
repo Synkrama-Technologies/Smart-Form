@@ -28,21 +28,50 @@
                     <h2 class="text-light">Smartboost</h2>
                 </div>
                 <div class="card-body">
-                    <form action="verify_login" method="POST" class="needs-validation" novalidate>
-                        <div style="display:all" class="">
+                    <form action="verify_login" method="POST" class="verify_login">
+                        <div>
+                            <?php
+                            if ($this->session->flashdata('message')) {
+                                echo '
+                                    <div class="alert alert-danger">
+                                        ' . $this->session->flashdata("message") . '
+                                    </div>
+                                ';
+                                $this->session->set_flashdata('message', '');
+                            }
+                            if ($this->session->flashdata('success_message')) {
+                                echo '
+                                    <div class="alert alert-success">
+                                    ' . $this->session->flashdata("success_message") . '
+                                    </div>
+                                ';
+                                $this->session->set_flashdata('success_message', '');
+                            }
+                            ?>
+
+                            <?php if (!empty(validation_errors())) : ?>
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div class="alert alert-danger">
+                                            <?php echo validation_errors(); ?>
+                                        </div>
+                                    </div>
+                                </div>
+                            <?php endif; ?>
+
                             <section class="row g-3">
-                                <div class="col-12">
-                                    <label for="">Login ID</label>
+                                <div class="form-group col-12">
+                                    <label for="user_login_id">Login ID</label>
                                     <div class="input-group">
-                                        <input type="text" class="form-control" name="user_login_id" placeholder="Enter the Login ID" required>
+                                        <input type="text" class="form-control" id="user_login_id" name="user_login_id" placeholder="Enter the Login ID" required>
                                         <div class="input-group-text"><img src="<?php echo base_url('images/icons/user.png'); ?>" alt=""></div>
                                     </div>
                                 </div>
                                 <br>
-                                <div class="col-12">
-                                    <label for="">Password</label>
+                                <div class="form-group col-12">
+                                    <label for="user_password">Password</label>
                                     <div class="input-group">
-                                        <input type="password" minlength="8" class="form-control" name="user_password" placeholder="Enter the Password" title="Password should be atleast 8 digits" required>
+                                        <input type="password" class="form-control" id="user_password" name="user_password" placeholder="Enter the Password" required>
                                         <div class="input-group-text"><img src="<?php echo base_url('images/icons/padlock.png'); ?>" alt=""></div>
                                     </div>
                                 </div>
@@ -51,7 +80,7 @@
 
                         <br><br>
                         <div class="text-center">
-                            <button class="btn btn-orange m-4 btn1" type="submit">Login</button>
+                            <button class="btn btn-orange m-4 btn1" type="submit" name="login_button">Login</button>
                         </div>
 
                     </form>
@@ -63,13 +92,27 @@
     </section>
 
 
-    <div class="div_hidden_3">
-    </div>
+
+    <script type="application/javascript">
+        /** After windod Load */
+        $(window).bind("load", function() {
+            window.setTimeout(function() {
+                $(".alert").fadeTo(500, 0).slideUp(500, function() {
+                    $(this).remove();
+                });
+            }, 4000);
+        });
+    </script>
 
 
-    <script src="<?php echo base_url('js/form_validation.js'); ?>"></script>
+    <script src="<?php echo base_url('js/jquery.min.js'); ?>"></script>
     <script src="<?php echo base_url('js/bootstrap.js'); ?>">
     </script>
+
+    <script src="<?php echo base_url('js/jquery.validate.min.js'); ?>"></script>
+    <script src="<?php echo base_url('js/additional-methods.min.js'); ?>"></script>
+
+    <script src="<?php echo base_url('js/form_validator.js'); ?>"></script>
 
 
 </body>

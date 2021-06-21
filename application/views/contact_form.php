@@ -67,19 +67,19 @@
                                     <br>
                                     <div class="row">
                                         <div class="col-sm-3">
-                                            <label>Label </label>
+                                            <label>Label <span class="text-danger">*</span></label>
                                         </div>
                                         <div class="col">
-                                            <input type="text" class="form-control col-sm-12" id="password_Label" onchange="all_password_onchange()" required>
+                                            <input type="text" class="form-control col-sm-12" id="password_Label" onchange="all_password_onchange()" placeholder="Enter the Label" required>
                                         </div>
                                     </div>
                                     <br>
                                     <div class="row">
                                         <div class="col-sm-3">
-                                            <label>Enter Name </label>
+                                            <label>Enter Name <span class="text-danger">*</span></label>
                                         </div>
                                         <div class="col">
-                                            <input type="text" class="form-control col-sm-12" id="password_Text" onchange="all_password_onchange()" required>
+                                            <input type="text" class="form-control col-sm-12" id="password_Text" onchange="all_password_onchange()" placeholder="Enter the Name" required>
                                         </div>
                                     </div>
                                     <br>
@@ -88,7 +88,7 @@
                                             <label>Default Value </label>
                                         </div>
                                         <div class="col">
-                                            <input type="text" class="form-control col-sm-12" id="password_DefaultValue" onchange="all_password_onchange()">
+                                            <input type="text" class="form-control col-sm-12" id="password_DefaultValue" onchange="all_password_onchange()" placeholder="Enter the Default Value">
                                         </div>
                                     </div>
                                     <br>
@@ -97,7 +97,7 @@
                                             <label>ID Attribute </label>
                                         </div>
                                         <div class="col">
-                                            <input type="text" class="form-control col-sm-12" id="password_ID" onchange="all_password_onchange()">
+                                            <input type="text" class="form-control col-sm-12" id="password_ID" onchange="all_password_onchange()" placeholder="Enter the ID">
                                         </div>
                                     </div>
                                     <br>
@@ -106,7 +106,7 @@
                                             <label>Class Attribute </label>
                                         </div>
                                         <div class="col">
-                                            <input type="text" class="form-control col-sm-12" id="password_Class" onchange="all_password_onchange()">
+                                            <input type="text" class="form-control col-sm-12" id="password_Class" onchange="all_password_onchange()" placeholder="Enter the Class">
                                         </div>
                                     </div>
                                     <br>
@@ -294,19 +294,19 @@
                                     <br>
                                     <div class="row">
                                         <div class="col-sm-3">
-                                            <label>Label </label>
+                                            <label>Label <span class="text-danger">*</span></label>
                                         </div>
                                         <div class="col">
-                                            <input type="text" class="form-control col-sm-12" id="text_Label" onchange="all_text_onchange()" required>
+                                            <input type="text" class="form-control col-sm-12" id="text_Label" onchange="all_text_onchange()" placeholder="Enter the Label" required>
                                         </div>
                                     </div>
                                     <br>
                                     <div class="row">
                                         <div class="col-sm-3">
-                                            <label>Enter Name </label>
+                                            <label>Enter Name <span class="text-danger">*</span></label>
                                         </div>
                                         <div class="col">
-                                            <input type="text" class="form-control col-sm-12" id="text_Text" onchange="all_text_onchange()" required>
+                                            <input type="text" class="form-control col-sm-12" id="text_Text" onchange="all_text_onchange()" placeholder="Enter the Name" required>
                                         </div>
                                     </div>
                                     <br>
@@ -315,7 +315,7 @@
                                             <label>Default Value </label>
                                         </div>
                                         <div class="col">
-                                            <input type="text" class="form-control col-sm-12" id="text_DefaultValue" onchange="all_text_onchange()">
+                                            <input type="text" class="form-control col-sm-12" id="text_DefaultValue" onchange="all_text_onchange()" placeholder="Enter the Default Value">
                                         </div>
                                     </div>
                                     <br>
@@ -324,7 +324,7 @@
                                             <label>ID Attribute </label>
                                         </div>
                                         <div class="col">
-                                            <input type="text" class="form-control col-sm-12" id="text_ID" onchange="all_text_onchange()">
+                                            <input type="text" class="form-control col-sm-12" id="text_ID" onchange="all_text_onchange()" placeholder="Enter the ID">
                                         </div>
                                     </div>
                                     <br>
@@ -333,7 +333,7 @@
                                             <label>Class Attribute </label>
                                         </div>
                                         <div class="col">
-                                            <input type="text" class="form-control col-sm-12" id="text_Class" onchange="all_text_onchange()">
+                                            <input type="text" class="form-control col-sm-12" id="text_Class" onchange="all_text_onchange()" placeholder="Enter the Class">
                                         </div>
                                     </div>
                                     <br>
@@ -523,19 +523,19 @@
                                     <br>
                                     <div class="row">
                                         <div class="col-sm-3">
-                                            <label>Label </label>
+                                            <label>Label <span class="text-danger">*</span></label>
                                         </div>
                                         <div class="col">
-                                            <input type="text" class="form-control col-sm-12" id="email_Label" onchange="all_email_onchange()" required>
+                                            <input type="text" class="form-control col-sm-12" id="email_Label" onchange="all_email_onchange()" placeholder="Enter the Label" required>
                                         </div>
                                     </div>
                                     <br>
                                     <div class="row">
                                         <div class="col-sm-3">
-                                            <label>Enter Name </label>
+                                            <label>Enter Name <span class="text-danger">*</span></label>
                                         </div>
                                         <div class="col">
-                                            <input type="text" class="form-control col-sm-12" id="email_Text" onchange="all_email_onchange()" required>
+                                            <input type="text" class="form-control col-sm-12" id="email_Text" onchange="all_email_onchange()" placeholder="Enter the Name" required>
                                         </div>
                                     </div>
                                     <br>
@@ -544,7 +544,7 @@
                                             <label>Default Value </label>
                                         </div>
                                         <div class="col">
-                                            <input type="email" class="form-control col-sm-12" id="email_DefaultValue" onchange="all_email_onchange()">
+                                            <input type="email" class="form-control col-sm-12" id="email_DefaultValue" onchange="all_email_onchange()" placeholder="Enter the Default Value">
                                         </div>
                                     </div>
                                     <br>
@@ -553,7 +553,7 @@
                                             <label>ID Attribute </label>
                                         </div>
                                         <div class="col">
-                                            <input type="text" class="form-control col-sm-12" id="email_ID" onchange="all_email_onchange()">
+                                            <input type="text" class="form-control col-sm-12" id="email_ID" onchange="all_email_onchange()" placeholder="Enter the ID">
                                         </div>
                                     </div>
                                     <br>
@@ -562,7 +562,7 @@
                                             <label>Class Attribute </label>
                                         </div>
                                         <div class="col">
-                                            <input type="text" class="form-control col-sm-12" id="email_Class" onchange="all_email_onchange()">
+                                            <input type="text" class="form-control col-sm-12" id="email_Class" onchange="all_email_onchange()" placeholder="Enter the Class">
                                         </div>
                                     </div>
                                     <br>
@@ -748,19 +748,19 @@
                                     <br>
                                     <div class="row">
                                         <div class="col-sm-3">
-                                            <label>Label </label>
+                                            <label>Label <span class="text-danger">*</span></label>
                                         </div>
                                         <div class="col">
-                                            <input type="text" class="form-control col-sm-12" id="URL_Label" onchange="all_url_onchange()" required>
+                                            <input type="text" class="form-control col-sm-12" id="URL_Label" onchange="all_url_onchange()" placeholder="Enter the Label" required>
                                         </div>
                                     </div>
                                     <br>
                                     <div class="row">
                                         <div class="col-sm-3">
-                                            <label>Enter Name </label>
+                                            <label>Enter Name <span class="text-danger">*</span></label>
                                         </div>
                                         <div class="col">
-                                            <input type="text" class="form-control col-sm-12" id="URL_Text" onchange="all_url_onchange()" required>
+                                            <input type="text" class="form-control col-sm-12" id="URL_Text" onchange="all_url_onchange()" placeholder="Enter the Name" required>
                                         </div>
                                     </div>
                                     <br>
@@ -769,7 +769,7 @@
                                             <label>Default Value </label>
                                         </div>
                                         <div class="col">
-                                            <input type="url" class="form-control col-sm-12" id="URL_DefaultValue" onchange="all_url_onchange()">
+                                            <input type="url" class="form-control col-sm-12" id="URL_DefaultValue" onchange="all_url_onchange()" placeholder="Enter the Default Value">
                                         </div>
                                     </div>
                                     <br>
@@ -778,7 +778,7 @@
                                             <label>ID Attribute </label>
                                         </div>
                                         <div class="col">
-                                            <input type="text" class="form-control col-sm-12" id="URL_ID" onchange="all_url_onchange()">
+                                            <input type="text" class="form-control col-sm-12" id="URL_ID" onchange="all_url_onchange()" placeholder="Enter the ID">
                                         </div>
                                     </div>
                                     <br>
@@ -787,7 +787,7 @@
                                             <label>Class Attribute </label>
                                         </div>
                                         <div class="col">
-                                            <input type="text" class="form-control col-sm-12" id="URL_Class" onchange="all_url_onchange()">
+                                            <input type="text" class="form-control col-sm-12" id="URL_Class" onchange="all_url_onchange()" placeholder="Enter the Class">
                                         </div>
                                     </div>
                                     <br>
@@ -970,19 +970,19 @@
                                     <br>
                                     <div class="row">
                                         <div class="col-sm-3">
-                                            <label>Label </label>
+                                            <label>Label <span class="text-danger">*</span></label>
                                         </div>
                                         <div class="col">
-                                            <input type="text" class="form-control col-sm-12" id="tel_Label" onchange="all_tel_onchange()" required>
+                                            <input type="text" class="form-control col-sm-12" id="tel_Label" onchange="all_tel_onchange()" placeholder="Enter the Label" required>
                                         </div>
                                     </div>
                                     <br>
                                     <div class="row">
                                         <div class="col-sm-3">
-                                            <label>Enter Name </label>
+                                            <label>Enter Name <span class="text-danger">*</span></label>
                                         </div>
                                         <div class="col">
-                                            <input type="text" class="form-control col-sm-12" id="tel_Text" onchange="all_tel_onchange()" required>
+                                            <input type="text" class="form-control col-sm-12" id="tel_Text" onchange="all_tel_onchange()" placeholder="Enter the Name" required>
                                         </div>
                                     </div>
                                     <br>
@@ -991,7 +991,7 @@
                                             <label>Default Value </label>
                                         </div>
                                         <div class="col">
-                                            <input type="tel" class="form-control col-sm-12" id="tel_DefaultValue" onchange="all_tel_onchange()">
+                                            <input type="tel" class="form-control col-sm-12" id="tel_DefaultValue" onchange="all_tel_onchange()" placeholder="Enter the Default Value">
                                         </div>
                                     </div>
                                     <br>
@@ -1000,7 +1000,7 @@
                                             <label>ID Attribute </label>
                                         </div>
                                         <div class="col">
-                                            <input type="text" class="form-control col-sm-12" id="tel_ID" onchange="all_tel_onchange()">
+                                            <input type="text" class="form-control col-sm-12" id="tel_ID" onchange="all_tel_onchange()" placeholder="Enter the ID">
                                         </div>
                                     </div>
                                     <br>
@@ -1009,7 +1009,7 @@
                                             <label>Class Attribute </label>
                                         </div>
                                         <div class="col">
-                                            <input type="text" class="form-control col-sm-12" id="tel_Class" onchange="all_tel_onchange()">
+                                            <input type="text" class="form-control col-sm-12" id="tel_Class" onchange="all_tel_onchange()" placeholder="Enter the Class">
                                         </div>
                                     </div>
                                     <br>
@@ -1191,19 +1191,19 @@
                                     <br>
                                     <div class="row">
                                         <div class="col-sm-3">
-                                            <label>Label </label>
+                                            <label>Label <span class="text-danger">*</span></label>
                                         </div>
                                         <div class="col">
-                                            <input type="text" class="form-control col-sm-12" id="textarea_Label" onchange="all_textarea_onchange()" required>
+                                            <input type="text" class="form-control col-sm-12" id="textarea_Label" onchange="all_textarea_onchange()" placeholder="Enter the Label" required>
                                         </div>
                                     </div>
                                     <br>
                                     <div class="row">
                                         <div class="col-sm-3">
-                                            <label>Enter Name </label>
+                                            <label>Enter Name <span class="text-danger">*</span></label>
                                         </div>
                                         <div class="col">
-                                            <input type="text" class="form-control col-sm-12" id="textarea_Text" onchange="all_textarea_onchange()" required>
+                                            <input type="text" class="form-control col-sm-12" id="textarea_Text" onchange="all_textarea_onchange()" placeholder="Enter the Name" required>
                                         </div>
                                     </div>
                                     <br>
@@ -1212,7 +1212,7 @@
                                             <label>Default Value </label>
                                         </div>
                                         <div class="col">
-                                            <input type="text" class="form-control col-sm-12" id="textarea_DefaultValue" onchange="all_textarea_onchange()">
+                                            <input type="text" class="form-control col-sm-12" id="textarea_DefaultValue" onchange="all_textarea_onchange()" placeholder="Enter the Default Value">
                                         </div>
                                     </div>
                                     <br>
@@ -1221,7 +1221,7 @@
                                             <label>ID Attribute </label>
                                         </div>
                                         <div class="col">
-                                            <input type="text" class="form-control col-sm-12" id="textarea_ID" onchange="all_textarea_onchange()">
+                                            <input type="text" class="form-control col-sm-12" id="textarea_ID" onchange="all_textarea_onchange()" placeholder="Enter the ID">
                                         </div>
                                     </div>
                                     <br>
@@ -1230,7 +1230,7 @@
                                             <label>Class Attribute </label>
                                         </div>
                                         <div class="col">
-                                            <input type="text" class="form-control col-sm-12" id="textarea_Class" onchange="all_textarea_onchange()">
+                                            <input type="text" class="form-control col-sm-12" id="textarea_Class" onchange="all_textarea_onchange()" placeholder="Enter the Class">
                                         </div>
                                     </div>
                                     <br>
@@ -1410,19 +1410,19 @@
                                     <br>
                                     <div class="row">
                                         <div class="col-sm-3">
-                                            <label>Label </label>
+                                            <label>Label <span class="text-danger">*</span></label>
                                         </div>
                                         <div class="col">
-                                            <input type="text" class="form-control col-sm-12" id="number_Label" onchange="all_number_onchange()" required>
+                                            <input type="text" class="form-control col-sm-12" id="number_Label" onchange="all_number_onchange()" placeholder="Enter the Label" required>
                                         </div>
                                     </div>
                                     <br>
                                     <div class="row">
                                         <div class="col-sm-3">
-                                            <label>Enter Name </label>
+                                            <label>Enter Name <span class="text-danger">*</span></label>
                                         </div>
                                         <div class="col">
-                                            <input type="text" class="form-control col-sm-12" id="number_Text" onchange="all_number_onchange()" required>
+                                            <input type="text" class="form-control col-sm-12" id="number_Text" onchange="all_number_onchange()" placeholder="Enter the Name" required>
                                         </div>
                                     </div>
                                     <br>
@@ -1431,7 +1431,7 @@
                                             <label>Default Value </label>
                                         </div>
                                         <div class="col">
-                                            <input type="number" class="form-control col-sm-12" id="number_DefaultValue" onchange="all_number_onchange()">
+                                            <input type="number" class="form-control col-sm-12" id="number_DefaultValue" onchange="all_number_onchange()" placeholder="Enter the Default Value">
                                         </div>
                                     </div>
                                     <br>
@@ -1454,7 +1454,7 @@
                                             <label>ID Attribute </label>
                                         </div>
                                         <div class="col">
-                                            <input type="text" class="form-control col-sm-12" id="number_ID" onchange="all_number_onchange()">
+                                            <input type="text" class="form-control col-sm-12" id="number_ID" onchange="all_number_onchange()" placeholder="Enter the ID">
                                         </div>
                                     </div>
                                     <br>
@@ -1463,7 +1463,7 @@
                                             <label>Class Attribute </label>
                                         </div>
                                         <div class="col">
-                                            <input type="text" class="form-control col-sm-12" id="number_Class" onchange="all_number_onchange()">
+                                            <input type="text" class="form-control col-sm-12" id="number_Class" onchange="all_number_onchange()" placeholder="Enter the Class">
                                         </div>
                                     </div>
                                     <br>
@@ -1666,19 +1666,19 @@
                                     <br>
                                     <div class="row">
                                         <div class="col-sm-3">
-                                            <label>Label </label>
+                                            <label>Label <span class="text-danger">*</span></label>
                                         </div>
                                         <div class="col">
-                                            <input type="text" class="form-control col-sm-12" id="date_Label" onchange="all_date_onchange()" required>
+                                            <input type="text" class="form-control col-sm-12" id="date_Label" onchange="all_date_onchange()" placeholder="Enter the Label" required>
                                         </div>
                                     </div>
                                     <br>
                                     <div class="row">
                                         <div class="col-sm-3">
-                                            <label>Enter Name </label>
+                                            <label>Enter Name <span class="text-danger">*</span></label>
                                         </div>
                                         <div class="col">
-                                            <input type="text" class="form-control col-sm-12" id="date_Text" onchange="all_date_onchange()" required>
+                                            <input type="text" class="form-control col-sm-12" id="date_Text" onchange="all_date_onchange()" placeholder="Enter the Name" required>
                                         </div>
                                     </div>
                                     <br>
@@ -1687,7 +1687,7 @@
                                             <label>Default Value </label>
                                         </div>
                                         <div class="col">
-                                            <input type="date" class="form-control col-sm-12" id="date_DefaultValue" onchange="all_date_onchange()">
+                                            <input type="date" class="form-control col-sm-12" id="date_DefaultValue" onchange="all_date_onchange()" placeholder="Enter the Default Value">
                                         </div>
                                     </div>
                                     <br>
@@ -1710,7 +1710,7 @@
                                             <label>ID Attribute </label>
                                         </div>
                                         <div class="col">
-                                            <input type="text" class="form-control col-sm-12" id="date_ID" onchange="all_date_onchange()">
+                                            <input type="text" class="form-control col-sm-12" id="date_ID" onchange="all_date_onchange()" placeholder="Enter the ID">
                                         </div>
                                     </div>
                                     <br>
@@ -1719,7 +1719,7 @@
                                             <label>Class Attribute </label>
                                         </div>
                                         <div class="col">
-                                            <input type="text" class="form-control col-sm-12" id="date_Class" onchange="all_date_onchange()">
+                                            <input type="text" class="form-control col-sm-12" id="date_Class" onchange="all_date_onchange()" placeholder="Enter the Class">
                                         </div>
                                     </div>
                                     <br>
@@ -1907,19 +1907,19 @@
                                 <section>
                                     <div class="row">
                                         <div class="col-sm-3">
-                                            <label>Label </label>
+                                            <label>Label <span class="text-danger">*</span></label>
                                         </div>
                                         <div class="col">
-                                            <input type="text" class="form-control col-sm-12" id="submit_Label" onchange="all_submit_onchange()" required>
+                                            <input type="text" class="form-control col-sm-12" id="submit_Label" onchange="all_submit_onchange()" placeholder="Enter the Label" required>
                                         </div>
                                     </div>
                                     <br>
                                     <div class="row">
                                         <div class="col-sm-3">
-                                            <label>Name </label>
+                                            <label>Name <span class="text-danger">*</span></label>
                                         </div>
                                         <div class="col">
-                                            <input type="text" class="form-control col-sm-12" id="submit_Name" onchange="all_submit_onchange()" required>
+                                            <input type="text" class="form-control col-sm-12" id="submit_Name" onchange="all_submit_onchange()" placeholder="Enter the Name" required>
                                         </div>
                                     </div>
                                     <br>
@@ -1928,7 +1928,7 @@
                                             <label>ID Attribute </label>
                                         </div>
                                         <div class="col">
-                                            <input type="text" class="form-control col-sm-12" id="submit_ID" onchange="all_submit_onchange()">
+                                            <input type="text" class="form-control col-sm-12" id="submit_ID" onchange="all_submit_onchange()" placeholder="Enter the ID">
                                         </div>
                                     </div>
                                     <br>
@@ -1937,7 +1937,7 @@
                                             <label>Class Attribute </label>
                                         </div>
                                         <div class="col">
-                                            <input type="text" class="form-control col-sm-12" id="submit_Class" onchange="all_submit_onchange()">
+                                            <input type="text" class="form-control col-sm-12" id="submit_Class" onchange="all_submit_onchange()" placeholder="Enter the Class">
                                         </div>
                                     </div>
                                     <br>
@@ -2085,19 +2085,19 @@
                                     <br>
                                     <div class="row">
                                         <div class="col-sm-3">
-                                            <label>Label </label>
+                                            <label>Label <span class="text-danger">*</span></label>
                                         </div>
                                         <div class="col">
-                                            <input type="text" class="form-control col-sm-12" id="dropdown_Label" onchange="all_dropdown_onchange()" required>
+                                            <input type="text" class="form-control col-sm-12" id="dropdown_Label" onchange="all_dropdown_onchange()" placeholder="Enter the Label" required>
                                         </div>
                                     </div>
                                     <br>
                                     <div class="row">
                                         <div class="col-sm-3">
-                                            <label>Enter Name </label>
+                                            <label>Enter Name <span class="text-danger">*</span></label>
                                         </div>
                                         <div class="col">
-                                            <input type="text" class="form-control col-sm-12" id="dropdown_Text" onchange="all_dropdown_onchange()" required>
+                                            <input type="text" class="form-control col-sm-12" id="dropdown_Text" onchange="all_dropdown_onchange()" placeholder="Enter the Name" required>
                                         </div>
                                     </div>
                                     <br>
@@ -2119,7 +2119,7 @@
                                             <label>ID Attribute </label>
                                         </div>
                                         <div class="col">
-                                            <input type="text" class="form-control col-sm-12" id="dropdown_ID" onchange="all_dropdown_onchange()">
+                                            <input type="text" class="form-control col-sm-12" id="dropdown_ID" onchange="all_dropdown_onchange()" placeholder="Enter the ID">
                                         </div>
                                     </div>
                                     <br>
@@ -2128,7 +2128,7 @@
                                             <label>Class Attribute </label>
                                         </div>
                                         <div class="col">
-                                            <input type="text" class="form-control col-sm-12" id="dropdown_Class" onchange="all_dropdown_onchange()">
+                                            <input type="text" class="form-control col-sm-12" id="dropdown_Class" onchange="all_dropdown_onchange()" placeholder="Enter the Class">
                                         </div>
                                     </div>
                                     <br>
@@ -2339,10 +2339,10 @@
                                     </div>
                                     <div class="row">
                                         <div class="col-sm-3">
-                                            <label>Enter Name </label>
+                                            <label>Enter Name <span class="text-danger">*</span></label>
                                         </div>
                                         <div class="col">
-                                            <input type="text" class="form-control col-sm-12" id="radio_Text" onchange="all_radio_onchange()" required>
+                                            <input type="text" class="form-control col-sm-12" id="radio_Text" onchange="all_radio_onchange()" placeholder="Enter the Name" required>
                                         </div>
                                     </div>
                                     <br>
@@ -2364,7 +2364,7 @@
                                             <label>ID Attribute </label>
                                         </div>
                                         <div class="col">
-                                            <input type="text" class="form-control col-sm-12" id="radio_ID" onchange="all_radio_onchange()">
+                                            <input type="text" class="form-control col-sm-12" id="radio_ID" onchange="all_radio_onchange()" placeholder="Enter the ID">
                                         </div>
                                     </div>
                                     <br>
@@ -2373,7 +2373,7 @@
                                             <label>Class Attribute </label>
                                         </div>
                                         <div class="col">
-                                            <input type="text" class="form-control col-sm-12" id="radio_Class" onchange="all_radio_onchange()">
+                                            <input type="text" class="form-control col-sm-12" id="radio_Class" onchange="all_radio_onchange()" placeholder="Enter the Class">
                                         </div>
                                     </div>
                                     <br>
@@ -2588,12 +2588,12 @@
 
         <form action="regular_expression" method="POST">
             <div class="row align-items-center">
-                <div class="col-6">
+                <div class="col-sm-6 form-group">
                     <div class="row">
-                        <div class="col-lg-3 m-0">
-                            <label class="form-label pt-1">Select the Client </label>
+                        <div class="col-sm-3">
+                            <label class="form-label pt-1">Select the Client <span class="text-danger">*</span></label>
                         </div>
-                        <div class="col-lg-3 m-0">
+                        <div class="col-sm-3 p-0">
                             <select class="form-control" name="client_id" title="Please select the Client" required>
                                 <option value="" selected disabled hidden>Select Client</option>
                                 <?php
@@ -2605,12 +2605,12 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-6">
+                <div class="col-sm-6 form-group">
                     <div class="row">
-                        <div class="col-lg-3">
-                            <label class="form-label pt-1">Form Name</label>
+                        <div class="col-sm-3">
+                            <label class="form-label pt-1">Form Name <span class="text-danger">*</span></label>
                         </div>
-                        <div class="col-lg-3">
+                        <div class="col-sm-3 p-0">
                             <input type="text" name="form_title" class="form-control" placeholder="Enter Form Name" required>
                         </div>
                     </div>
@@ -2649,7 +2649,7 @@
             <br>
             <div class="row">
                 <div class="col-lg-2">
-                    <label class="form-label pt-1">Thank you Message</label>
+                    <label class="form-label pt-1">Thank you Message <span class="text-danger">*</span></label>
                 </div>
                 <div class="col-lg-6">
                     <input type="text" name="form_thank_you_message" class="form-control" placeholder="Enter Thank you Message" value="Thank you for submitting the form" required>
@@ -2658,7 +2658,7 @@
             <br>
             <div class="row">
                 <div class="col-lg-2">
-                    <label class="form-label pt-1">Error Message</label>
+                    <label class="form-label pt-1">Error Message <span class="text-danger">*</span></label>
                 </div>
                 <div class="col-lg-6">
                     <input type="text" name="form_error_message" class="form-control" placeholder="Enter Error Message" value="Something went wrong. Try Later" required>
@@ -2667,10 +2667,10 @@
             <br>
             <div class="row">
                 <div class="col-lg-2">
-                    <label class="form-label pt-1">Redirect Path</label>
+                    <label class="form-label pt-1">Redirect Path <span class="text-danger">*</span></label>
                 </div>
                 <div class="col-lg-6">
-                    <input type="url" name="form_redirect_path" class="form-control" placeholder="Enter Redirect Path">
+                    <input type="url" name="form_redirect_path" class="form-control" placeholder="Enter Redirect Path" required>
                 </div>
             </div>
             <br>

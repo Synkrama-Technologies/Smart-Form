@@ -14,7 +14,7 @@
                         Client
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                        <li><a class="dropdown-item" href="add_client">Add Client</a></li>
+                        <li><a class="dropdown-item" href="client_registeration">Add Client</a></li>
                         <li><a class="dropdown-item" href="manage_client">Manage Client</a></li>
                     </ul>
                 </li>
@@ -31,7 +31,9 @@
             </div> -->
         </div>
         <form class="form-inline my-2 my-lg-0">
-            <a class="btn btn-orange m-2 my-sm-0 btn-1" href="logout" type="submit">Logout</a>
+            <a class="btn btn-orange m-2 my-sm-0 btn1" href="logout" type="submit">
+                <img src="<?php echo base_url('images/icons/logout.png'); ?>" alt=""> <span>Logout</span>
+            </a>
         </form>
 
 

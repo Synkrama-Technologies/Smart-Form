@@ -56,12 +56,12 @@ $route['translate_uri_dashes'] = FALSE;
 $route['contact_form'] = 'Main_controller/contact_form';
 $route['form_submit'] = 'Main_controller/form_submit';
 $route['login'] = 'Main_controller/login';
-$route['client_registeration'] = 'Main_controller/add_client';
+$route['client_registeration'] = 'Main_controller/client_registeration';
 $route['verify_login'] = 'Main_controller/verify_login';
 $route['home'] = 'Main_controller/home';
 $route['logout'] = 'Main_controller/logout';
 $route['index'] = 'Main_controller/index';
-$route['add_client'] = 'Main_controller/client_registeration';
+$route['add_client'] = 'Main_controller/add_client';
 $route['manage_client'] = 'Main_controller/manage_client';
 
 $route['update_client'] = 'Main_controller/update_client';

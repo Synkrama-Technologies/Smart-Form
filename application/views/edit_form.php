@@ -22,7 +22,7 @@
 
     <?php include('includes/navbar.php') ?>
 
-    <section class="container mt-3 mb-3">
+    <section class="container-fluid mt-3 mb-3">
         <section class="register_1">
             <div class="card">
                 <div class="card-header bg-purple text-center">
@@ -30,19 +30,23 @@
                 </div>
                 <div class="card-body">
                     <div class="table-responsive">
-                        <table class="table table-bordered table-striped" style="white-space: nowrap;">
+                        <table class="table table-bordered table-striped table-hover" style="white-space: nowrap;">
                             <thead>
                                 <tr class="text-center" style="background-color: #fafafa;">
+                                    <th>Sr. No.</th>
                                     <th class="w-25">Client Name</th>
                                     <th class="w-25">Form Name</th>
                                     <th>Assign the Changes</th>
                                 </tr>
                             </thead>
                             <?php
+
                             foreach ($client_details as $row1) {
+                                $count = 1;
                                 foreach ($form as $row) {
                                     echo "
                                     <tr class='text-center'>
+                                        <td>$count</td>
                                         <td>$row1->client_name</td>
                                         <td>$row->form_name</td>
                                         <td class='text-center' width='100%'>
@@ -78,8 +82,8 @@
                                                     ?>
 
                                                     <h5 class="my-4">
-                                                        <span id="copy_textarea">[contact-form-7|id="<?php echo $id_temp; ?>"|name="<?php echo $name_temp; ?>"]</span>
-                                                        <button class=" btn-sm" style="float:right;" onclick="copy()" id="btn_click"><img src="<?php echo base_url('images/icons/copy.png'); ?>" alt="sort-icon"></button>
+                                                        <span id="div1" class="password-span">[contact-form-7|id="<?php echo $id_temp; ?>"|name="<?php echo $name_temp; ?>"]</span>
+                                                        <button id="button1" class="btn btn-sm btn-green" style="float:right;" onclick="CopyToClipboard('div1')"><img src="<?php echo base_url('images/icons/copy.png'); ?>" alt="sort-icon"></button>
                                                     </h5>
                                                 </div>
                                             </div>
@@ -87,25 +91,23 @@
                                     </div>
 
                                     <script>
-                                        // function copy() {
-                                        //     var copy_textarea = document.getElementById("copy_textarea");
-                                        //     copy_textarea.select();
-                                        //     document.execCommand("copy");
-                                        // }
-
-                                        // document.getElementById("cp_btn").addEventListener("click", copy_password);
-
-                                        function copy() {
-                                            var copyText = document.getElementById("copy_textarea");
-                                            var textArea = document.createElement("textarea");
-                                            textArea.value = copyText.textContent;
-                                            document.body.appendChild(textArea);
-                                            textArea.select();
-                                            document.execCommand("Copy");
-                                            textArea.remove();
+                                        function CopyToClipboard(containerid) {
+                                            if (document.selection) {
+                                                var range = document.body.createTextRange();
+                                                range.moveToElementText(document.getElementById(containerid));
+                                                range.select().createTextRange();
+                                                document.execCommand("copy");
+                                            } else if (window.getSelection) {
+                                                var range = document.createRange();
+                                                range.selectNode(document.getElementById(containerid));
+                                                window.getSelection().addRange(range);
+                                                document.execCommand("copy");
+                                                // alert("Text has been copied")
+                                            }
                                         }
                                     </script>
                             <?php
+                                    $count++;
                                 }
                             }
                             ?>

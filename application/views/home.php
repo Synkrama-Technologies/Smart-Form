@@ -32,10 +32,10 @@
                 </div>
                 <div class="card-body">
                     <div class="table-responsive table_padding">
-                        <table class="table table-bordered table-striped" style="white-space: nowrap;" width="100%" id="dataTable" cellspacing="0">
+                        <table class="table table-bordered table-striped table-hover" style="white-space: nowrap;" width="100%" id="dataTable" cellspacing="0">
                             <thead>
                                 <tr class="text-center" style="background-color: #fafafa;">
-                                    <th>ID <img src="<?php echo base_url('images/icons/sort.png'); ?>" alt="sort-icon"></th>
+                                    <th>Sr. No. <img src="<?php echo base_url('images/icons/sort.png'); ?>" alt="sort-icon"></th>
                                     <th>Client Name <img src="<?php echo base_url('images/icons/sort.png'); ?>" alt="sort-icon"></th>
                                     <th>Client URL <img src="<?php echo base_url('images/icons/sort.png'); ?>" alt="sort-icon"></th>
                                     <th>Client Primary Email <img src="<?php echo base_url('images/icons/sort.png'); ?>" alt="sort-icon"></th>
@@ -44,23 +44,25 @@
                             </thead>
                             <!-- <tbody> -->
                             <?php
+                            $count = 1;
                             foreach ($client as $row) {
                                 echo "
-                                <tr class='text-center'>
-                                    <td>$row->client_id</td>
-                                    <td>$row->client_name</td>
-                                    <td>$row->client_url</td>
-                                    <td>$row->client_primary_email </td>
-                                    <td class='btn-group' width='100%'>
-                                        <form method='POST' action='edit_form'>
-                                            <input type='text' value='$row->client_id' name='client_id' hidden>
-                                            <button class='btn btn-yellow rounded-3 btn-md m-1' type='submit' name='edit_button'>View Form</button>
-                                        </form>
-                                        <button class='btn btn-green rounded-3 btn-md m-1' data-bs-toggle='modal' data-bs-target='#update_$row->client_id'>Update</button>
-                                        <button class='btn btn-red rounded-3 btn-md m-1' data-bs-toggle='modal' data-bs-target='#delete_$row->client_id'>Delete</button>
-                                    </td>
-                                </tr> 
-                            ";
+                                    <tr class='text-center'>
+                                        <td>$count</td>
+                                        <td>$row->client_name</td>
+                                        <td>$row->client_url</td>
+                                        <td>$row->client_primary_email </td>
+                                        <td class='btn-group' width='100%'>
+                                            <form method='POST' action='edit_form'>
+                                                <input type='text' value='$row->client_id' name='client_id' hidden>
+                                                <button class='btn btn-yellow rounded-3 btn-md m-1' type='submit' name='edit_button'>View Form</button>
+                                            </form>
+                                            <button class='btn btn-green rounded-3 btn-md m-1' data-bs-toggle='modal' data-bs-target='#update_$row->client_id'>Update</button>
+                                            <button class='btn btn-red rounded-3 btn-md m-1' data-bs-toggle='modal' data-bs-target='#delete_$row->client_id'>Delete</button>
+                                        </td>
+                                    </tr> 
+                                ";
+                                $count++;
                             ?>
                                 <!-- </tbody> -->
 
@@ -74,11 +76,21 @@
                                             </div>
                                             <div class="modal-body">
                                                 <form action="update_client" method="POST" class="needs-validation" novalidate>
-
-                                                    <label for="client_primary_email">Client Primary Email</label>
-                                                    <input type="text" name="client_primary_email" class="form-control mt-1" value="<?php echo $row->client_primary_email; ?>">
-                                                    <input type="text" name="client_id" value="<?php echo $row->client_id; ?>" hidden>
-
+                                                    <section class="row g-3">
+                                                        <div class="form-group col-sm-12">
+                                                            <label for="client_name">Client Name <span class="text-danger">*</span></label>
+                                                            <input type="text" name="client_name" class="form-control mt-1" value="<?php echo $row->client_name; ?>">
+                                                        </div>
+                                                        <div class="form-group col-sm-12">
+                                                            <label for="client_url">Client URL <span class="text-danger">*</span></label>
+                                                            <input type="text" name="client_url" class="form-control mt-1" value="<?php echo $row->client_url; ?>">
+                                                        </div>
+                                                        <div class="form-group col-sm-12">
+                                                            <label for="client_primary_email">Client Primary Email <span class="text-danger">*</span></label>
+                                                            <input type="text" name="client_primary_email" class="form-control mt-1" value="<?php echo $row->client_primary_email; ?>">
+                                                            <input type="text" name="client_id" value="<?php echo $row->client_id; ?>" hidden>
+                                                        </div>
+                                                    </section>
                                                     <br><br>
                                                     <div class="text-center">
                                                         <button type="button" class="btn btn-orange btn1" data-bs-dismiss="modal">Close</button>
